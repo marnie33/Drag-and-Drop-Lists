@@ -1,0 +1,116 @@
+<!--Created by: Cy <3
+(aka: Marnie Tisdale)
+Date Created: 9/30/14
+Last Modified: 10/1/14
+
+Summary: Creating drag and drop lists. Drag items into categories, they can only 'stick' in correct categories. Change on drop.
+***in progress: attempting to only allow an item to be dropped once-->
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    
+    <link href='http://fonts.googleapis.com/css?family=Dosis|Cabin|Philosopher|Calligraffitti|Dancing+Script|Amatic+SC|Orbitron' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" type="text/css"/>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <!--^my stylesheet for "homegrown" css-->
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <!--^ my JavaScript/jQuery file for index.html-->
+
+</head>
+    <body>
+        <!--header-->
+        <div class="header">
+            <div class="container">
+                Drag and Drop!
+            </div>
+        </div><!--end header-->
+        
+        <!--main area of page-->
+        <div class="jumbotron" id="jumbo">
+            <div class="container">
+                <!--first row of page-->
+                <div class="row">
+                    <!--buffer left-->
+                    <div class="col-md-3"></div>
+                    <!--instructions button-->
+                    <div class="col-md-6">
+                        <div id="buttonrow"><center>
+                            <button id="inst" onclick="Alert.render('Drag items from the top 3 lists and place them in the correct boxes below!')">Instructions</button>
+                        </center></div>
+                    </div>
+                    <!--buffer right-->
+                    <div class="col-md-3"></div>
+                </div><!--end button row for instructions button-->
+                
+                <!--2nd row of page-->
+                <div class="row">
+                    <!--left options list-->
+                    <div class="col-md-4">
+                        <div class="left choice"><div id="lbg"><ul>
+                            <li class="fantasy">Stardust</li>
+                            <li class="scifi">Firefly</li>
+                            <li class="other">Suits</li>
+                            <li class="fantasy">Game of Thrones</li>
+                            <li class="scifi">Voyager</li>
+                            <li class="scifi">TNG</li>
+                            <li class="fantasy">Being Human</li>
+                        </ul></div></div><!--end options list-->
+                        <!--fantasy drop zone-->
+                        <div id="fbg"><div id="dz1"><span><center>Fantasy</center></span><br></div></div>
+                    </div><!--end left side of page-->
+                    
+                    <!--center options list-->
+                    <div class="col-md-4">
+                        <div class="middle choice"><div id="mbg"><ul>
+                            <li class="fantasy">The Seeker</li>
+                            <li class="scifi">Haven</li>
+                            <li class="scifi">Warehouse 13</li>
+                            <li class="scifi">The 4400</li>
+                            <li class="scifi">Eureka</li>
+                            <li class="other">Little Britian</li>
+                            <li class="scifi">Invasion</li>
+                        </ul></div></div><!--end options list-->
+                        <!--sci fi drop zone-->
+                        <div id="sfbg"><div id="dz2"><span><center>Sci Fi</center></span><br></div></div>
+                    </div><!--end center of page-->   
+                     
+                    <!--right options list-->
+                    <div class="col-md-4">
+                        <div class="right choice"><div id="rbg"><ul>
+                            <li class="scifi">Seaquest</li>
+                            <li class="scifi">Earth 2</li>
+                            <li class="fantasy">Angel</li>
+                            <li class="fantasy">The Dresden Files</li>
+                            <li class="fantasy">Hemlock Grove</li>
+                            <li class="other">Matlock</li>
+                            <li class="other">The King of Queens</li>
+                        </ul></div></div><!--end options list-->
+                        <!--other drop zone-->
+                        <div id="obg"><div id="dz3"><span><center>Other</center></span><br></div></div>
+                    </div><!--end right side of page-->
+                    
+                </div><!--end 2nd row-->
+            </div><!--end container-->
+        </div><!--end jumbotron/main page area-->
+        
+        <!--footer-->
+        <div class="footer">
+            <div class="container">
+                <div id="sig" class="pull-left"><a href="mailto:marnie_tisdale@yahoo.com">By: Cy &#60;3</a></div>
+                <div id="copy" class="pull-right">2014 &copy;</div>
+            </div>
+        </div><!--end footer-->
+        
+        <!--placeholders to put dialog and screen overlay into-->
+    <div id="boxoverlay"></div>
+    <div id="boxholder"></div>
+        
+    </body>
+</html>
